@@ -17,14 +17,23 @@ body{
 
 .location, .temperature{
     height:30vh;
-    width:50%;
+    width:100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
 }
 
+
 .temperature{
     flex-direction: column;
+}
+
+
+@media (max-width:800px){
+    .location, .temperature{
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
 }
 
 .degree-section{
@@ -33,6 +42,9 @@ body{
     align-items: center;
 }
 
+span::before{
+    content:"°"
+}
 
 .degree-section span{
     margin:10px;
@@ -42,4 +54,11 @@ body{
 
 .degree-section h2{
     font-size: 40px;
+}
+
+.temperature-description{
+    border: 1px solid white;
+    padding:5px;
+    border-radius: 8px;
+    box-shadow: 3px 5px 10px #000;
 }
